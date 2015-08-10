@@ -22,7 +22,8 @@ while (true) {
   }
   for (var i = 0; i < students.length; i += 1) {
     student = students[i];
-    if ( student.name === search ) {
+    // For Good practice use ".match" in if condition for search term code looks like "student.name.toLowerCase().match(search.toLowerCase())" 
+    if (student.name.toLowerCase() == search.toLowerCase()) {
       message = getStudentReport( student );
       print(message);
     }
